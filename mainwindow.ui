@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>928</width>
+    <height>645</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTextEdit" name="textEdit">
+      <property name="styleSheet">
+       <string notr="true">border-image: url(:/new/ICON/images/background_black.png);
+border-image: url(:/new/ICON/images/backgroundp.png);</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>928</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_F">
+    <property name="title">
+     <string>文件（&amp;F）</string>
+    </property>
+    <addaction name="newAction"/>
+    <addaction name="openAction"/>
+    <addaction name="saveAction"/>
+    <addaction name="saveAsAction"/>
+    <addaction name="separator"/>
+    <addaction name="printAction"/>
+    <addaction name="printPdfAction"/>
+    <addaction name="printViewAction"/>
+    <addaction name="separator"/>
+    <addaction name="exitAction"/>
+   </widget>
+   <widget class="QMenu" name="menu_E">
+    <property name="title">
+     <string>编辑（&amp;E）</string>
+    </property>
+    <addaction name="undoAction"/>
+    <addaction name="redoAction"/>
+    <addaction name="separator"/>
+    <addaction name="copyAction"/>
+    <addaction name="pasteAction"/>
+    <addaction name="cutAction"/>
+    <addaction name="seletAllAction"/>
+    <addaction name="separator"/>
+    <addaction name="fontAction"/>
+    <addaction name="colorAction"/>
+    <addaction name="timeAction"/>
+   </widget>
+   <widget class="QMenu" name="menu_O">
+    <property name="title">
+     <string>Help(&amp;H)</string>
+    </property>
+    <addaction name="actionUpdate_U"/>
+    <addaction name="aboutSoftWareAction"/>
+    <addaction name="actionHelp_E"/>
+    <addaction name="gitHubAction"/>
+    <addaction name="aboutQtAction"/>
+   </widget>
+   <addaction name="menu_F"/>
+   <addaction name="menu_E"/>
+   <addaction name="menu_O"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="openAction"/>
+   <addaction name="saveAction"/>
+   <addaction name="seletAllAction"/>
+   <addaction name="cutAction"/>
+   <addaction name="undoAction"/>
+   <addaction name="redoAction"/>
+   <addaction name="separator"/>
+   <addaction name="printViewAction"/>
+   <addaction name="printAction"/>
+   <addaction name="printPdfAction"/>
+   <addaction name="separator"/>
+   <addaction name="fontAction"/>
+   <addaction name="colorAction"/>
+   <addaction name="exitAction"/>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="undoAction">
+   <property name="icon">
+    <iconset>
+     <normalon>:/new/ICON/images/undo0.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>撤销(&amp;U)</string>
+   </property>
+  </action>
+  <action name="redoAction">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/ICON/images/turnright.png</normaloff>:/new/ICON/images/turnright.png</iconset>
+   </property>
+   <property name="text">
+    <string>重做(&amp;R)</string>
+   </property>
+  </action>
+  <action name="action_C">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/ICON/images/addButton.png</normaloff>:/new/ICON/images/addButton.png</iconset>
+   </property>
+   <property name="text">
+    <string>复制(&amp;C)</string>
+   </property>
+  </action>
+  <action name="colorAction">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/ICON/images/editinvert.png</normaloff>:/new/ICON/images/editinvert.png</iconset>
+   </property>
+   <property name="text">
+    <string>颜色(&amp;C)</string>
+   </property>
+  </action>
+  <action name="fontAction">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/ICON/images/pickall.png</normaloff>:/new/ICON/images/pickall.png</iconset>
+   </property>
+   <property name="text">
+    <string>字体(&amp;F)</string>
+   </property>
+  </action>
+  <action name="timeAction">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/ICON/images/sendButton.png</normaloff>:/new/ICON/images/sendButton.png</iconset>
+   </property>
+   <property name="text">
+    <string>Time(&amp;T)</string>
+   </property>
+  </action>
+  <action name="openAction">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/ICON/images/scissors-hover.png</normaloff>:/new/ICON/images/scissors-hover.png</iconset>
+   </property>
+   <property name="text">
+    <string>open(&amp;O)</string>
+   </property>
+  </action>
+  <action name="newAction">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/ICON/images/create_patient.png</normaloff>:/new/ICON/images/create_patient.png</iconset>
+   </property>
+   <property name="text">
+    <string>new(&amp;N)</string>
+   </property>
+  </action>
+  <action name="saveAction">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/ICON/images/filesaveas.png</normaloff>:/new/ICON/images/filesaveas.png</iconset>
+   </property>
+   <property name="text">
+    <string>save(&amp;S)</string>
+   </property>
+  </action>
+  <action name="saveAsAction">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/ICON/images/setParameter.png</normaloff>:/new/ICON/images/setParameter.png</iconset>
+   </property>
+   <property name="text">
+    <string>save as(&amp;A)</string>
+   </property>
+  </action>
+  <action name="printAction">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/ICON/images/pagesprint.png</normaloff>:/new/ICON/images/pagesprint.png</iconset>
+   </property>
+   <property name="text">
+    <string>print(&amp;P)</string>
+   </property>
+  </action>
+  <action name="exitAction">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/ICON/images/init.png</normaloff>:/new/ICON/images/init.png</iconset>
+   </property>
+   <property name="text">
+    <string>exit(&amp;E)</string>
+   </property>
+  </action>
+  <action name="copyAction">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/ICON/images/addButton.png</normaloff>:/new/ICON/images/addButton.png</iconset>
+   </property>
+   <property name="text">
+    <string>copy(&amp;C)</string>
+   </property>
+  </action>
+  <action name="seletAllAction">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/ICON/images/zoom_in.png</normaloff>:/new/ICON/images/zoom_in.png</iconset>
+   </property>
+   <property name="text">
+    <string>seletall(&amp;A)</string>
+   </property>
+  </action>
+  <action name="pasteAction">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/ICON/images/editresize.png</normaloff>:/new/ICON/images/editresize.png</iconset>
+   </property>
+   <property name="text">
+    <string>paste(&amp;P)</string>
+   </property>
+  </action>
+  <action name="cutAction">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/ICON/images/2.png</normaloff>:/new/ICON/images/2.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cut(&amp;X)</string>
+   </property>
+  </action>
+  <action name="actionUpdate_U">
+   <property name="text">
+    <string>update(&amp;U)</string>
+   </property>
+  </action>
+  <action name="aboutSoftWareAction">
+   <property name="text">
+    <string>about software(&amp;S)</string>
+   </property>
+  </action>
+  <action name="actionHelp_E">
+   <property name="text">
+    <string>help(&amp;E)</string>
+   </property>
+  </action>
+  <action name="gitHubAction">
+   <property name="text">
+    <string>github(&amp;G)</string>
+   </property>
+  </action>
+  <action name="aboutQtAction">
+   <property name="text">
+    <string>about Qt(&amp;Q)</string>
+   </property>
+  </action>
+  <action name="printViewAction">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/ICON/images/recording.png</normaloff>:/new/ICON/images/recording.png</iconset>
+   </property>
+   <property name="text">
+    <string>printView</string>
+   </property>
+  </action>
+  <action name="printPdfAction">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/new/ICON/images/fileloaded.png</normaloff>:/new/ICON/images/fileloaded.png</iconset>
+   </property>
+   <property name="text">
+    <string>PDF</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>
